@@ -4,7 +4,15 @@ Welcome to my Angular Projects repository! This repository serves as a collectio
 
 ## Projects
 
-**Coming Soon**
+1. **[Kanban Project](./kanban/)**
+
+    The Kanban project is designed to streamline task management using the Kanban methodology. It includes features such as drag-and-drop functionality for task organization and dynamic column updates.
+
+    **Status:** Under active development.
+
+2. **Coming Soon**
+
+    Stay tuned for more exciting projects!    
 
 ## Usage
 
