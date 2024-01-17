@@ -4,13 +4,7 @@ Welcome to my Angular Projects repository! This repository serves as a collectio
 
 ## Projects
 
-1. **Todo App**
-   - Description: A simple todo application with basic CRUD functionality.
-   - Folder: `todo/`
-
-2. **Kanban Board**
-   - Description: An Angular project implementing a kanban board for task management.
-   - Folder: `kanban/`
+**Coming Soon**
 
 ## Usage
 
