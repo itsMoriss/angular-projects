@@ -1,0 +1,19 @@
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #e1e2ed;
+}
+
+.top-section {
+    background-color: aquamarine;
+}
+
+.content-section {
+    background-color: cadetblue;
+    flex-grow: 1;
+}
+
+.bottom-section {
+    background-color: coral;
+}
