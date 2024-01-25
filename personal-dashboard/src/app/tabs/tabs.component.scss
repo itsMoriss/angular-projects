@@ -89,6 +89,8 @@
     border-radius: 50%;
 
     box-shadow: 0px 7px 17px rgba(black, 0.15);
+
+    transition-delay: .1s;
 }
 
 // END OF TAB TILE BACKGROUND 'SHAPE' STYLES
@@ -111,10 +113,21 @@
 
     background: rgba(white, 0.85);
 
+    border-radius: 2px;
+
+    transition: all 0.2s;
+
     // hide by default
     opacity: 0;
+    transform: scaleX(0);
 }
 
 .tab.selected::after {
     opacity: 1;
+    transform: scaleX(1);
+    transition-delay: .1s;
+}
+
+.tab.selected {
+    outline: none;
 }
