@@ -2,27 +2,83 @@
 
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+@import url("https://fonts.googleapis.com/css?family=Material+Icons+Outlined");
 
 html {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 h1 {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 h2 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .container {
-    max-width: 850px;
-    margin: auto;
+  max-width: 850px;
+  margin: auto;
 }
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes fade-out {
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes slide-from-right {
+//   from {
+//     transform: translateX(30px);
+//   }
+// }
+
+// @keyframes slide-to-left {
+//   to {
+//     transform: translateX(-30px);
+//   }
+// }
+
+// ::view-transition-old(root) {
+//   animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+//     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+// }
+
+// ::view-transition-new(root) {
+//   animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+//     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+// }
+
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+  
+  ::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+  }
+  
+  ::view-transition-new(root) {
+    animation: 2s cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in;
+  }
