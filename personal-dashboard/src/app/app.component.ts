@@ -14,22 +14,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
     TabsComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  animations: [
-    trigger('routerAnim', [
-      transition('* => *', [
-        style({
-          background: 'blue'
-        }),
-        animate(1000)
-      ])
-    ])
-  ]
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   
-  prepareRoute(outlet: RouterOutlet) {
-    if (outlet.isActivated) return outlet.activatedRoute.snapshot.url;
-    return null; // Add a return statement to handle the case when the outlet is not activated
-  }
 }
