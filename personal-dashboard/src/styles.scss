@@ -8,6 +8,7 @@
 
 html {
   font-family: "Inter", sans-serif;
+  color: #222;
 }
 
 html,
@@ -21,6 +22,13 @@ h1 {
 
 h2 {
   font-size: 36px;
+  margin-bottom: 25px;
+}
+
+h1.isBold,
+h2.isBold {
+    font-weight: bold;
+    letter-spacing: -2px;
 }
 
 .container {
@@ -71,6 +79,37 @@ h2 {
   background: rgba(white, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+.textbox,
+.textarea {
+  font-size: 18px;
+  font-family: inherit;
+
+  border: 2px solid rgba(black, 0.3);
+  border-radius: 4px;
+
+  background: rgba(white, 0.85);
+
+  padding: 8px 10px;
+
+  margin-bottom: 20px;
+
+  width: 100%;
+
+  &:hover {
+    background: rgba(white, 0.9);
+  }
+  
+  &:focus {
+    border-color: white;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: rgba(black, 0.42);
+  }
 }
 
 // @keyframes fade-in {
