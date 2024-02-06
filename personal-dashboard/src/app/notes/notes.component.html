@@ -4,12 +4,7 @@
 
         <div class="notes-list">
 
-            <div class="note-card">
-                <div class="note-card-title">
-                    This is the note title!
-                </div>
-                <div class="note-card-content">I am the content :)</div>
-            </div>
+            <app-note-card *ngFor="let note of notes" [note]="note"></app-note-card>
 
         </div>
 
