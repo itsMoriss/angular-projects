@@ -49,8 +49,10 @@ h2.isBold {
 
   font-size: 18px;
   font-weight: 600;
+  font-family: inherit;
 
   border-radius: 4px;
+  border: none;
 
   cursor: pointer;
 
@@ -73,6 +75,10 @@ h2.isBold {
   &.btns-centered {
     justify-content: center;
   }
+
+  .align-end {
+    margin-left: auto;
+  }
 }
 
 .has-blurred-white-bg {
@@ -83,6 +89,8 @@ h2.isBold {
 
 .textbox,
 .textarea {
+  display: block;
+  
   font-size: 18px;
   font-family: inherit;
 
@@ -110,6 +118,11 @@ h2.isBold {
   &:focus {
     border-color: rgba(black, 0.42);
   }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 // @keyframes fade-in {
