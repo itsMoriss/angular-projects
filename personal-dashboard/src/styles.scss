@@ -82,9 +82,13 @@ h2.isBold {
 }
 
 .has-blurred-white-bg {
-  background: rgba(white, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(white, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.form-field {
+  margin-bottom: 20px;
 }
 
 .textbox,
@@ -101,7 +105,7 @@ h2.isBold {
 
   padding: 8px 10px;
 
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
 
   width: 100%;
 
