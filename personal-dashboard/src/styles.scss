@@ -92,6 +92,7 @@ a {
   cursor: pointer;
   font-size: 48px;
   margin-left: 10px;
+  transition: color 0.3s, transform 0.3s;
 
   &:hover {
     color: darkred;

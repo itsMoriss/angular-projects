@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule, ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { NoteService } from '../shared/note.service';
 import { Note } from '../shared/note.model';
+import { ToastService } from '../shared/toast.service';
 
 @Component({
   selector: 'app-edit-note',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, MatTooltipModule],
   templateUrl: './edit-note.component.html',
   styleUrl: './edit-note.component.scss'
 })
@@ -18,7 +20,12 @@ export class EditNoteComponent {
 
   note!: Note;
 
-  constructor(private route: ActivatedRoute, private noteService: NoteService, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private noteService: NoteService, 
+    private router: Router,
+    private toastService: ToastService
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
@@ -33,11 +40,13 @@ export class EditNoteComponent {
 
     if (form.invalid) {
       this.showValidationErrors = true;
+      //this.toastService.showError('Please fix the validation errors');
       return undefined;
     }
 
     this.noteService.updateNote(this.note.id, form.value);
     this.router.navigateByUrl("/notes");
+    //this.toastService.showSuccess('Note updated successfully');
 
     return true;
   }
@@ -45,6 +54,7 @@ export class EditNoteComponent {
   deleteNote() {
     this.noteService.deleteNote(this.note.id);
     this.router.navigateByUrl("/notes");
+    //this.toastService.showSuccess('Note deleted successfully');
   }
 
 }
