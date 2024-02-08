@@ -31,6 +31,10 @@ h2.isBold {
     letter-spacing: -2px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 850px;
   margin: auto;
@@ -70,6 +74,8 @@ h2.isBold {
 
 .btns-container {
   display: flex;
+  gap: 12px;
+
   margin-top: 20px;
 
   &.btns-centered {
@@ -78,6 +84,18 @@ h2.isBold {
 
   .align-end {
     margin-left: auto;
+  }
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  font-size: 48px;
+  margin-left: 10px;
+
+  &:hover {
+    color: darkred;
+    transform: scale(1.1);
   }
 }
 

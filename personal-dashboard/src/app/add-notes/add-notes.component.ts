@@ -14,12 +14,15 @@ import { NoteService } from '../shared/note.service';
 })
 export class AddNotesComponent {
 
+  showValidationErrors!: boolean;
+
   constructor(private notesService: NoteService, private router: Router) { }
 
   onFormSubmit(form: NgForm) {
 
     if (form.invalid) {
-      return alert('Please enter a title for the note');
+      this.showValidationErrors = true;
+      return undefined;
     }
 
     const note = new Note(form.value.title, form.value.content);
@@ -27,6 +30,8 @@ export class AddNotesComponent {
 
     this.notesService.addNote(note);
     this.router.navigateByUrl('/notes');
+
+    return true;
   }
 
 }
