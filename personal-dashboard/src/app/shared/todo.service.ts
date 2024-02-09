@@ -6,7 +6,11 @@ import { Todo } from './todo.model';
 })
 export class TodoService {
 
-  todos!: Todo[];
+  todos: Todo[] = [
+    new Todo('foo'),
+    new Todo('bar'),
+    new Todo('baz')
+  ]
 
   constructor() { }
 
