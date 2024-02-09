@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { TodoService } from '../shared/todo.service';
 import { Todo } from '../shared/todo.model';
@@ -7,7 +8,7 @@ import { Todo } from '../shared/todo.model';
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule, TodoItemComponent],
+  imports: [CommonModule, RouterModule, TodoItemComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss'
 })
