@@ -32,7 +32,7 @@ export class AddNotesComponent {
 
     this.notesService.addNote(note);
     this.router.navigateByUrl('/notes');
-    //this.toastService.showSuccess('Note added successfully');
+    this.toastService.showSuccess('Note added successfully');
 
     return true;
   }

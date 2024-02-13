@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ToastService } from '../shared/toast.service';
+import { TodoService } from '../shared/todo.service';
+import { Todo } from '../shared/todo.model';
 
 @Component({
   selector: 'app-add-todo',
@@ -14,22 +17,19 @@ export class AddTodoComponent {
 
   showValidationErrors!: boolean;
 
+  constructor(private todoService: TodoService, private router: Router, private toastService: ToastService) { }
+
   onFormSubmit(form: NgForm) {
 
     if (form.invalid) {
       this.showValidationErrors = true;
-      //this.toastService.showError('Please fix the validation errors')
+      this.toastService.showError('Please fix the validation errors')
       return undefined;
     }
 
-    // const note = new Note(form.value.title, form.value.content);
-    // console.log(note);
-
-    // this.notesService.addNote(note);
-    // this.router.navigateByUrl('/notes');
-    //this.toastService.showSuccess('Note added successfully');
-
-    return true;
+    const todo = new Todo(form.value.text);
+    this.todoService.addTodo(todo);
+    this.router.navigateByUrl('/todos');
   }
 
 }
